@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Obtenim el nom de la Branca actual
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$BRANCH" == "main" ]; then
+  docker-compose -f ./Docker/Dockercompose/Prod/docker-compose.yml up -d
+else
+  docker-compose -f ./Docker/Dockercompose/Dev/docker-compose.yml up -d
+fi

@@ -1,0 +1,199 @@
+
+/*variables amb la nostre paleta*/
+:root{
+  --negre_paleta:#000000;
+  --blanc_paleta:#ffffff;
+  --blau_fosc_paleta:#2F4550;
+  --mid:#586F7C;
+  --border-suau: rgba(255,255,255,.18);
+  --text-suau: rgba(255,255,255,.85);
+  --text-molt-suau: rgba(255,255,255,.70);
+  --bg-card: rgba(0,0,0,.12);
+}
+
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: var(--mid);
+  color: var(--blanc_paleta);
+  overflow-y: auto;
+}
+
+/* ocultar scrollbar pero mantener scroll */
+body::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}
+
+/* =========================================================
+   LAYOUT GENERAL
+   ========================================================= */
+main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CENTRE */
+.center-content{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 48px 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+
+
+/* LOGO */
+#logoMoviment{
+  height: 84px;
+  margin-bottom: 26px;
+  filter: drop-shadow(0 12px 22px rgba(0,0,0,.35));
+}
+
+/* TÍTOL */
+.title{
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.05;
+}
+
+/* animació */
+.text-xl{
+  font-size: clamp(46px, 6vw, 74px);
+  letter-spacing: 0.08em;
+}
+
+
+.subtitle{
+  margin: 18px 0 36px;
+  max-width: 60ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-suau);
+}
+
+/* BOTONES PRINCIPALES */
+.actions{
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid var(--blanc_paleta);
+  color: var(--blanc_paleta);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.btn.primary{
+  background: var(--blanc_paleta);
+  color: var(--negre_paleta);
+}
+
+.btn.secondary{
+  background: transparent;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+  opacity: .92;
+}
+
+/* menu mini */
+.mini-nav{
+  margin-top: 26px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mini-nav a{
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-molt-suau);
+  text-decoration: none;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: 2px solid var(--blanc_paleta);
+  padding: 12px;
+}
+
+.mini-nav a:hover{
+  color: var(--blanc_paleta);
+}
+
+/* SECCIONS */
+.section{
+  max-width: 900px;
+  width: 100%;
+  padding: 64px 20px 20px;
+}
+
+.section-title{
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.section-lead{
+  margin: 0 0 26px;
+  max-width: 70ch;
+  line-height: 1.7;
+  color: var(--text-suau);
+}
+
+/* Partits per taules per mes comotditat */
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+
+
+/* FOOTER */
+.footer{
+  max-width: 900px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-molt-suau);
+  font-size: 13px;
+}
+
+
+@media (max-width: 900px){
+  .grid-3{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px){
+  .text-xl{ font-size: 42px; }
+  .btn{ width: 100%; text-align: center; }
+}

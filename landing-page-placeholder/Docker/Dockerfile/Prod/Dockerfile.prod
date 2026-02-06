@@ -1,0 +1,9 @@
+FROM httpd:latest
+WORKDIR /usr/local/apache2/htdocs/
+COPY Docker/Dockerfile/Prod/httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
+COPY ./connectFeelings/* /usr/local/apache2/htdocs/
+
+RUN echo "Include conf/extra/httpd-vhosts.conf" \
+    >> /usr/local/apache2/conf/httpd.conf
+
+EXPOSE 80
