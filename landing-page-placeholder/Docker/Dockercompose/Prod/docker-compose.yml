@@ -1,0 +1,14 @@
+version: latest
+
+services:
+  apache:
+    build:
+      context: ../../..
+      dockerfile: Docker/Dockerfile/Prod/Dockerfile.prod
+    image: apache-prod
+    container_name: apache_prod
+    restart: always
+    ports:
+    - "8080:80"
+    volumes:
+    - ../../../connectFeelings:/usr/local/apache2/htdocs:ro

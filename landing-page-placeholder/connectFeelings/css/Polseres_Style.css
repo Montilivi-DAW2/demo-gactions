@@ -1,0 +1,198 @@
+/* GLOBAL ------------------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5c717a;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER ------------------------------------------------------- */
+
+header {
+    background-color: #2f434c;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    color: white;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.header-buttons button {
+    background: #f5f5f5;
+    border: none;
+    padding: 8px 10px;
+    margin-left: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* NAV ------------------------------------------------------- */
+
+nav {
+    background: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN ------------------------------------------------------- */
+
+main {
+    width: 80%;
+    margin: auto;
+    background-color: #b7d7d2;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+main h2 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* INPUT NOM PULSERA ----------------------------------------- */
+
+.bracelet-name {
+    display: block;
+    margin: auto;
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #888;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* DETALLS BOX ------------------------------------------------ */
+
+.details-box {
+    background-color: #c8e3dd;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #2f434c;
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e9edf2;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #2f434c;
+}
+
+.delete-btn i {
+    font-size: 20px;
+}
+
+.piece-list ol {
+    padding-left: 22px;
+    font-size: 16px;
+}
+
+/* FOOTER ----------------------------------------------------- */
+
+footer {
+    background-color: #2f434c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.logo-foot {
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
+/* RESPONSIVE -------------------------------------------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    nav {
+        width: 80%;
+    }
+
+    main {
+        width: 92%;
+        padding: 25px;
+    }
+
+    .details-box {
+        padding: 25px;
+    }
+}
+
+/* Mòbils grans */
+@media (max-width: 600px) {
+
+    nav {
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+
+    .bracelet-name {
+        width: 90%;
+    }
+
+    .details-box {
+        padding: 20px;
+    }
+
+    .delete-btn {
+        padding: 8px;
+    }
+}
+
+/* Mòbils petits */
+@media (max-width: 420px) {
+
+    input {
+        padding: 8px;
+    }
+
+    .details-box {
+        padding: 15px;
+    }
+
+    .delete-btn i {
+        font-size: 16px;
+    }
+}

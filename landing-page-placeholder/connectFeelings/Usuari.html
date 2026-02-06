@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectFeelings - El teu compte</title>
+
+    <link rel="stylesheet" href="./Styles/UsuariStyle.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="../Documentacio/Logo/LogoProjecte2.svg" class="logo">
+        <h1>ConnectFeelings</h1>
+    </div>
+
+    <div class="header-buttons">
+        <button class="toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="settings"><i class="fa-solid fa-gear"></i></button>
+        <button class="login"><i class="fa-solid fa-user"></i></button>
+    </div>
+</header>
+
+<nav>
+    <a href="#">HOME</a>
+    <a href="#">MATERIALS</a>
+    <a href="#">CONFIGURADOR</a>
+    <a href="#">CONTACTE</a>
+</nav>
+
+<main>
+    <h2>EL TEU COMPTE</h2>
+
+    <section class="box">
+        <h3>Les teves dades</h3>
+        <div class="form-grid">
+            <label>Username <input type="text" value=""></label>
+            <label>Password <input type="password" value=""></label>
+            <label>Nom <input type="text" value=""></label>
+            <label>Cognom <input type="text" value=""></label>
+            <label>Email <input type="email" value=""></label>
+        </div>
+    </section>
+
+    <section class="box">
+        <div class="title-edit">
+            <h3>Modifica les teves dades</h3>
+            <i class="fa-solid fa-floppy-disk save-btn"></i>
+        </div>
+        <div class="form-grid">
+            <label>Username <input type="text" value=""></label>
+            <label>Password <input type="password" value=""></label>
+            <label>Nom <input type="text" value=""></label>
+            <label>Cognom <input type="text" value=""></label>
+            <label>Email <input type="email" value=""></label>
+        </div>
+    </section>
+
+    <div class="options">
+        <div class="option">
+            <i class="fa-solid fa-cube"></i>
+            <p>Pulseres guardades</p>
+        </div>
+
+        <div class="option">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <p>Configurar Pulsera</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+<script>
+    document.querySelector(".save-btn").addEventListener("click", () => {
+        alert("Canvis guardats correctament!");
+    });
+</script>
+</body>
+</html>
