@@ -22,3 +22,10 @@ jobs:
         run: |
           chmod +x script.sh
           ./script.sh
+
+      - name: commit i push
+        uses: stefanzweifel/git-auto-commit-action@5
+        with:
+          commit_message: "Update file"
+          commit_user_name: "pulido-montilivi [demo-gactions]"
+          
