@@ -1,0 +1,1 @@
+echo "nou fixer" >> fitxer.txt
